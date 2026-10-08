@@ -1,0 +1,1 @@
+from app.models.skill import Skill
