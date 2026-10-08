@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pypdf
+groq
+pydantic
+python-dotenv
+python-multipart
+email-validator
+httpx
+pytest
