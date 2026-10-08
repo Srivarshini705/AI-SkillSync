@@ -1,9 +1,13 @@
+import os
+
 import streamlit as st
 from dotenv import load_dotenv
 
 from langchain_groq import ChatGroq
 from langchain_chroma import Chroma
 from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
+from langchain_community.document_loaders import TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from skill_gap import (
     ALL_SKILLS,
@@ -14,15 +18,10 @@ from skill_gap import (
     get_matched_skills
 )
 
-
-# =========================================================
-# CONFIGURATION
-# =========================================================
-
 load_dotenv()
 
 st.set_page_config(
-    page_title="SkillSync AI",
+    page_title="AI-SKILLSYNC",
     page_icon="🎯",
     layout="wide"
 )
@@ -34,14 +33,13 @@ st.set_page_config(
 
 @st.cache_resource
 def load_embeddings():
-
     return FastEmbedEmbeddings(
         model_name="BAAI/bge-small-en-v1.5"
     )
 
 
 # =========================================================
-# CHROMA
+# CREATE CHROMADB IF IT DOES NOT EXIST
 # =========================================================
 
 @st.cache_resource
@@ -49,10 +47,38 @@ def load_vectorstore():
 
     embeddings = load_embeddings()
 
-    return Chroma(
-        persist_directory="chroma_db",
-        embedding_function=embeddings
+    chroma_path = "chroma_db"
+
+    # If ChromaDB already exists
+    if os.path.exists(chroma_path):
+
+        return Chroma(
+            persist_directory=chroma_path,
+            embedding_function=embeddings
+        )
+
+    # Create ChromaDB from skills.txt
+    loader = TextLoader(
+        "data/skills.txt",
+        encoding="utf-8"
     )
+
+    documents = loader.load()
+
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1200,
+        chunk_overlap=200
+    )
+
+    chunks = text_splitter.split_documents(documents)
+
+    vectorstore = Chroma.from_documents(
+        documents=chunks,
+        embedding=embeddings,
+        persist_directory=chroma_path
+    )
+
+    return vectorstore
 
 
 vectorstore = load_vectorstore()
@@ -89,10 +115,10 @@ if "current_skills" not in st.session_state:
 
 
 # =========================================================
-# HEADER
+# TITLE
 # =========================================================
 
-st.title("🎯 SkillSync AI")
+st.title("🎯 AI-SKILLSYNC")
 
 st.write(
     "AI-powered skill gap analysis, technical chatbot "
@@ -142,14 +168,10 @@ if option == "💬 Chat with SkillSync":
 
     st.header("💬 Chat with SkillSync")
 
-    # Show previous messages
     for message in st.session_state.messages:
 
         with st.chat_message(message["role"]):
-
-            st.markdown(
-                message["content"]
-            )
+            st.markdown(message["content"])
 
 
     question = st.chat_input(
@@ -159,7 +181,6 @@ if option == "💬 Chat with SkillSync":
 
     if question:
 
-        # Save user message
         st.session_state.messages.append(
             {
                 "role": "user",
@@ -169,26 +190,17 @@ if option == "💬 Chat with SkillSync":
 
 
         with st.chat_message("user"):
-
             st.markdown(question)
 
 
-        # Retrieve relevant knowledge
-        documents = retriever.invoke(
-            question
-        )
+        documents = retriever.invoke(question)
 
 
-        # Create context
         context = "\n\n".join(
             document.page_content
             for document in documents
         )
 
-
-        # =================================================
-        # CHAT PROMPT
-        # =================================================
 
         prompt = f"""
 You are SkillSync, a beginner-friendly technical
@@ -231,14 +243,11 @@ USER QUESTION:
 """
 
 
-        response = llm.invoke(
-            prompt
-        )
+        response = llm.invoke(prompt)
 
         answer = response.content
 
 
-        # Save assistant response
         st.session_state.messages.append(
             {
                 "role": "assistant",
@@ -248,7 +257,6 @@ USER QUESTION:
 
 
         with st.chat_message("assistant"):
-
             st.markdown(answer)
 
 
@@ -266,36 +274,27 @@ elif option == "🎯 Skill Gap Analysis":
     )
 
 
-    # =====================================================
-    # CURRENT SKILLS
-    # =====================================================
-
     st.subheader("Your Current Skills")
 
 
-    # -----------------------------------------------------
-    # Option 1: Select from predefined skills
-    # -----------------------------------------------------
-
     selected_skills = st.multiselect(
         "Select skills from the list",
+
         options=ALL_SKILLS,
+
         key="all_skills_selector",
+
         placeholder="Search and select skills..."
     )
 
 
-    # -----------------------------------------------------
-    # Option 2: Add skills manually
-    # -----------------------------------------------------
-
     manual_skills = st.text_input(
         "Add other skills manually",
+
         placeholder="Example: React, TensorFlow, PyTorch"
     )
 
 
-    # Convert manual input to list
     if manual_skills:
 
         manual_skill_list = [
@@ -309,39 +308,25 @@ elif option == "🎯 Skill Gap Analysis":
         manual_skill_list = []
 
 
-    # -----------------------------------------------------
-    # Combine both
-    # -----------------------------------------------------
-
     current_skills = (
         selected_skills +
         manual_skill_list
     )
 
 
-    # Remove duplicates
     current_skills = list(
         dict.fromkeys(current_skills)
     )
 
 
-    # Save combined skills
     st.session_state.current_skills = current_skills
 
-
-    # -----------------------------------------------------
-    # Display count
-    # -----------------------------------------------------
 
     st.caption(
         f"{len(ALL_SKILLS)} predefined skills available • "
         f"{len(current_skills)} total skills selected"
     )
 
-
-    # -----------------------------------------------------
-    # Display selected skills
-    # -----------------------------------------------------
 
     if current_skills:
 
@@ -360,23 +345,14 @@ elif option == "🎯 Skill Gap Analysis":
         )
 
 
-    # =====================================================
-    # TARGET CAREER
-    # =====================================================
-
     st.subheader("Target Career")
+
 
     skill_gap_role = st.selectbox(
         "Select your target career",
-        sorted(
-            CAREER_SKILLS.keys()
-        )
+        sorted(CAREER_SKILLS.keys())
     )
 
-
-    # =====================================================
-    # ANALYZE BUTTON
-    # =====================================================
 
     analyze = st.button(
         "🔍 Analyze Skill Gap",
@@ -394,19 +370,11 @@ elif option == "🎯 Skill Gap Analysis":
 
         else:
 
-            # =================================================
-            # GET SKILL GAP
-            # =================================================
-
             required_skills, missing_skills = get_skill_gap(
                 current_skills,
                 skill_gap_role
             )
 
-
-            # =================================================
-            # MATCH PERCENTAGE
-            # =================================================
 
             match_percentage = calculate_skill_match(
                 current_skills,
@@ -414,19 +382,11 @@ elif option == "🎯 Skill Gap Analysis":
             )
 
 
-            # =================================================
-            # MATCHED SKILLS
-            # =================================================
-
             matched_skills = get_matched_skills(
                 current_skills,
                 skill_gap_role
             )
 
-
-            # =================================================
-            # SKILL MATCH
-            # =================================================
 
             st.subheader("📊 Skill Match")
 
@@ -436,11 +396,8 @@ elif option == "🎯 Skill Gap Analysis":
             )
 
 
-            # =================================================
-            # MATCHED SKILLS
-            # =================================================
-
             st.subheader("✅ Matched Skills")
+
 
             if matched_skills:
 
@@ -457,11 +414,8 @@ elif option == "🎯 Skill Gap Analysis":
                 )
 
 
-            # =================================================
-            # SKILL GAPS
-            # =================================================
-
             st.subheader("❌ Skill Gaps")
+
 
             if missing_skills:
 
@@ -478,11 +432,8 @@ elif option == "🎯 Skill Gap Analysis":
                 )
 
 
-            # =================================================
-            # ROADMAP
-            # =================================================
-
             st.subheader("🛣️ Learning Roadmap")
+
 
             roadmap = generate_roadmap(
                 missing_skills
@@ -493,9 +444,7 @@ elif option == "🎯 Skill Gap Analysis":
 
                 for step in roadmap:
 
-                    st.write(
-                        step
-                    )
+                    st.write(step)
 
             else:
 
@@ -503,10 +452,6 @@ elif option == "🎯 Skill Gap Analysis":
                     "No additional learning required."
                 )
 
-
-            # =================================================
-            # REQUIRED SKILLS
-            # =================================================
 
             with st.expander(
                 "📋 View Required Skills"
@@ -531,10 +476,6 @@ elif option == "📄 Resume Generator":
         "Enter your information to generate a resume draft."
     )
 
-
-    # =====================================================
-    # RESUME DETAILS
-    # =====================================================
 
     name = st.text_input(
         "Full Name"
@@ -586,10 +527,6 @@ elif option == "📄 Resume Generator":
     )
 
 
-    # =====================================================
-    # GENERATE RESUME
-    # =====================================================
-
     if st.button(
         "Generate Resume",
         use_container_width=True
@@ -637,29 +574,24 @@ ADDITIONAL REQUIREMENTS:
             resume_prompt
         )
 
+
         resume = response.content
 
-
-        # =================================================
-        # DISPLAY RESUME
-        # =================================================
 
         st.subheader(
             "Generated Resume"
         )
 
-        st.markdown(
-            resume
-        )
 
+        st.markdown(resume)
 
-        # =================================================
-        # DOWNLOAD RESUME
-        # =================================================
 
         st.download_button(
             label="⬇️ Download Resume",
+
             data=resume,
+
             file_name="SkillSync_Resume.md",
+
             mime="text/markdown"
         )
