@@ -1,59 +1,73 @@
-# SkillSync AI 🎯
+# AI-SKILLSYNC
 
-SkillSync AI is an AI-powered career assistant that helps students understand skill gaps, learn technical concepts, and generate resumes.
+AI-SKILLSYNC is an AI-powered career assistant that helps students understand their skill gaps, learn technical concepts, and generate resumes.
 
-## 🚀 Features
+## 🚀 Live Demo
 
-### 1. 💬 Chat with SkillSync
-An AI-powered technical chatbot that:
-- Answers programming and software-related questions
+https://ai-skillsync-puswk6jngmxwcfa9frj4ty.streamlit.app/
+
+## 💻 GitHub Repository
+
+https://github.com/Renuka2338/AI-SKILLSYNC
+
+## ✨ Features
+
+### 💬 Chat with SkillSync
+- AI-powered technical chatbot
 - Uses RAG to retrieve relevant knowledge
-- Uses ChromaDB for vector search
-- Uses Groq LLM for responses
-- Answers only what the user asks
+- Provides answers based only on the user's question
+- Supports programming, web, API, database, cloud and software concepts
 
-### 2. 🎯 Skill Gap Analysis
-Compare your current skills with the skills required for a target career.
+### 🎯 Skill Gap Analysis
+- Select current technical skills
+- Choose a target career role
+- Calculates skill match
+- Identifies missing skills
+- Generates a learning roadmap
 
-Features:
-- 80+ predefined technical skills
-- Add custom skills manually
-- Select a target career
-- Calculate career skill match percentage
-- Show matched skills
-- Identify missing skills
-- Generate a learning roadmap
-
-### 3. 📄 Resume Generator
-Generate a professional resume draft based on the information provided by the user.
+### 📄 Resume Generator
+- Enter education, skills, projects and certifications
+- Generate a professional resume using AI
+- Download the generated resume
 
 ## 🛠️ Technologies Used
 
 - Python
 - Streamlit
 - LangChain
-- Groq
 - ChromaDB
 - FastEmbed
-- RAG (Retrieval-Augmented Generation)
-- Hugging Face Embeddings
+- Groq LLM
+- Retrieval-Augmented Generation (RAG)
 
-## 📂 Project Structure
+## 🧠 RAG Workflow
+
+User Question  
+↓  
+LangChain  
+↓  
+ChromaDB Retrieval  
+↓  
+Relevant Knowledge  
+↓  
+Groq LLM  
+↓  
+AI Response
+
+## 📁 Project Structure
 
 ```text
-SKILLSYNC-AI/
+AI-SKILLSYNC/
 │
 ├── data/
 │   └── skills.txt
 │
 ├── chroma_db/
-│
-├── venv/
-│
 ├── app.py
 ├── chatbot.py
 ├── ingest.py
 ├── skill_gap.py
+├── requirements.txt
 ├── .env
 ├── .gitignore
 └── README.md
