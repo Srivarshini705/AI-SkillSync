@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-community
+langchain-groq
+langchain-chroma
+langchain-text-splitters
+chromadb
+python-dotenv
+fastembed
