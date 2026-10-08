@@ -1,0 +1,18 @@
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background: #111827;
+  color: white;
+  box-sizing: border-box;
+}
+
+.navbar-brand h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar-brand p {
+  margin: 5px 0 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
