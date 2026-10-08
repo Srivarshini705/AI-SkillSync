@@ -1,0 +1,1302 @@
+GENERAL ANSWERING RULE
+-----------------------
+
+SkillSync is a beginner-friendly career and technical skills assistant.
+
+When the user asks to explain a technical topic:
+1. Start with a simple definition.
+2. Explain the main idea in simple language.
+3. Explain the most important concepts.
+4. Give a small practical or code example when useful.
+5. Mention common uses when relevant.
+
+When the user asks for project ideas:
+- Suggest projects directly related to the requested skill.
+- Prefer beginner-friendly ideas first.
+- Briefly explain what each project demonstrates.
+
+When the user asks about certificates:
+- Suggest certificate/certification types relevant to the requested skill.
+- Mention providers only when supported by this knowledge base.
+- Do not invent specific certificate names or providers.
+
+When the user asks for explanation + project ideas + certificates:
+- Give all requested sections.
+- Keep every section related to the requested skill.
+
+When the user asks about resume generation:
+- Use only the information supplied by the user.
+- Do not invent skills, projects, education, certifications, experience, or achievements.
+- Create concise, professional, ATS-friendly resume content.
+- Suitable sections include Summary, Education, Technical Skills, Projects, Certifications, Experience, and Achievements when information is provided.
+
+Important:
+- Answer ONLY what the user asks.
+- Do not add unrelated technologies or career information.
+- Do not add unnecessary checklists.
+- If a roadmap is requested, give only the requested roadmap.
+- If a comparison is requested, compare only the requested topics.
+- If interview questions are requested, give only interview questions for that topic.
+- If code is requested, give only relevant code.
+- If the user asks a follow-up, answer only that follow-up.
+- Keep explanations beginner-friendly unless advanced information is requested.
+
+
+1. PYTHON
+----------
+
+Python is a high-level, general-purpose programming language known for readable syntax and a large ecosystem.
+
+Important concepts:
+- Variables and data types
+- Operators
+- Conditions
+- Loops
+- Functions
+- Lists, tuples, sets, and dictionaries
+- Strings
+- Exception handling
+- Modules and packages
+- File handling
+- Object-oriented programming
+
+Common uses:
+- Automation
+- Web development
+- Data analysis
+- Machine learning
+- AI
+- Scripting
+
+Project ideas:
+- Student Management System
+- Expense Tracker
+- Job Application Tracker
+- File Organizer
+- Weather Application using an API
+- Web Scraper
+- Data Analysis Project
+- Simple Chatbot
+
+Suitable certificate types:
+- Python programming certificates
+- Python developer certificates
+- Python data analysis certificates
+
+
+2. JAVA
+--------
+
+Java is a general-purpose, object-oriented programming language commonly used for backend systems and enterprise applications.
+
+Important concepts:
+- Variables and data types
+- Conditions and loops
+- Methods
+- Classes and objects
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Exception handling
+- Collections
+
+Common uses:
+- Backend development
+- Enterprise applications
+- Android development
+- Large-scale systems
+
+Project ideas:
+- Banking System
+- Library Management System
+- Student Management System
+- Employee Management System
+- Online Examination System
+
+Suitable certificate types:
+- Java programming certificates
+- Java developer certificates
+- Backend development certificates
+
+
+3. C
+-----
+
+C is a procedural programming language widely used for systems and low-level programming.
+
+Important concepts:
+- Variables and data types
+- Operators
+- Conditions
+- Loops
+- Functions
+- Arrays
+- Pointers
+- Structures
+- Memory management
+
+Project ideas:
+- Student Management System
+- Simple Calculator
+- Bank Account System
+- Quiz Application
+
+Suitable certificate types:
+- C programming certificates
+- Programming fundamentals certificates
+
+
+4. C++
+-------
+
+C++ is a compiled programming language that supports procedural, object-oriented, and generic programming.
+
+Important concepts:
+- Classes and objects
+- Inheritance
+- Polymorphism
+- Templates
+- STL
+- Vectors
+- Maps
+- Pointers
+
+Project ideas:
+- Banking System
+- Inventory Management System
+- Student Management System
+- Quiz Application
+- Library Management System
+
+Suitable certificate types:
+- C++ programming certificates
+- C++ developer certificates
+- Data structures and algorithms certificates
+
+
+5. C#
+------
+
+C# is a modern object-oriented programming language commonly used with the .NET platform.
+
+Important concepts:
+- Classes and objects
+- Interfaces
+- Inheritance
+- Exception handling
+- Collections
+- LINQ
+- Async programming
+
+Common uses:
+- .NET applications
+- Backend development
+- Desktop applications
+- Game development with Unity
+
+Project ideas:
+- Employee Management System
+- Inventory Application
+- Library System
+- Simple .NET Web API
+
+
+6. JAVASCRIPT
+-------------
+
+JavaScript is a programming language widely used to make web pages interactive.
+
+Important concepts:
+- Variables
+- Data types
+- Operators
+- Conditions
+- Loops
+- Functions
+- Arrays
+- Objects
+- DOM
+- Events
+- Promises
+- Async/await
+- Fetch API
+
+Project ideas:
+- To-Do List
+- Calculator
+- Quiz Application
+- Weather Application
+- Expense Tracker
+- Interactive Portfolio
+
+Suitable certificate types:
+- JavaScript programming certificates
+- Web development certificates
+- Frontend development certificates
+
+
+7. TYPESCRIPT
+-------------
+
+TypeScript is a superset of JavaScript that adds static typing and other development features.
+
+Important concepts:
+- Type annotations
+- Interfaces
+- Types
+- Arrays
+- Functions
+- Classes
+- Generics
+- Type narrowing
+
+Project ideas:
+- Typed To-Do Application
+- Task Management App
+- API Client
+- Portfolio Website
+
+Suitable certificate types:
+- TypeScript programming certificates
+- Frontend development certificates
+
+
+8. GO
+-----
+
+Go is a compiled programming language designed for simplicity, performance, and concurrent programming.
+
+Important concepts:
+- Variables
+- Functions
+- Structs
+- Interfaces
+- Goroutines
+- Channels
+- Error handling
+
+Common uses:
+- Backend development
+- Cloud services
+- APIs
+- Distributed systems
+
+Project ideas:
+- REST API
+- URL Shortener
+- Task Management API
+- Simple Web Server
+
+Suitable certificate types:
+- Go programming certificates
+- Backend development certificates
+
+
+9. RUST
+-------
+
+Rust is a systems programming language focused on performance and memory safety.
+
+Important concepts:
+- Ownership
+- Borrowing
+- Lifetimes
+- Structs
+- Enums
+- Pattern matching
+- Error handling
+
+Project ideas:
+- Command-line application
+- File utility
+- REST API
+- Task manager
+
+
+10. PHP
+-------
+
+PHP is a server-side scripting language commonly used for web development.
+
+Important concepts:
+- Variables
+- Functions
+- Arrays
+- Forms
+- Sessions
+- Database connectivity
+- Object-oriented programming
+
+Project ideas:
+- Blog Website
+- Student Portal
+- Login System
+- Simple E-commerce Website
+
+Suitable certificate types:
+- PHP programming certificates
+- Web development certificates
+
+
+11. RUBY
+--------
+
+Ruby is a high-level programming language known for readable syntax and commonly associated with web development through Ruby on Rails.
+
+Project ideas:
+- Blog Application
+- Task Manager
+- Student Management System
+
+Suitable certificate types:
+- Ruby programming certificates
+- Web development certificates
+
+
+12. SWIFT
+---------
+
+Swift is Apple's programming language for iOS and macOS development.
+
+Project ideas:
+- To-Do iOS App
+- Notes App
+- Expense Tracker
+- Weather App
+
+
+13. KOTLIN
+----------
+
+Kotlin is a modern programming language commonly used for Android development and backend development.
+
+Project ideas:
+- Android To-Do App
+- Notes App
+- Expense Tracker
+- Weather App
+
+
+14. DART
+--------
+
+Dart is the programming language commonly used with Flutter for cross-platform application development.
+
+Project ideas:
+- To-Do App
+- Weather App
+- Expense Tracker
+- Notes Application
+
+
+15. R
+-----
+
+R is a programming language widely used for statistics and data analysis.
+
+Important concepts:
+- Vectors
+- Data frames
+- Functions
+- Statistical analysis
+- Data visualization
+
+Project ideas:
+- Sales Data Analysis
+- Student Performance Analysis
+- Statistical Data Visualization
+
+Suitable certificate types:
+- R programming certificates
+- Data analysis certificates
+- Statistics certificates
+
+
+16. HTML
+--------
+
+HTML is the markup language used to structure content on web pages.
+
+Important concepts:
+- Headings
+- Paragraphs
+- Links
+- Images
+- Lists
+- Tables
+- Forms
+- Semantic elements
+
+Project ideas:
+- Personal Portfolio
+- College Website
+- Landing Page
+- Blog Page
+
+Suitable certificate types:
+- HTML certificates
+- Web development certificates
+- Frontend development certificates
+
+
+17. CSS
+-------
+
+CSS is used to style and design HTML pages.
+
+Important concepts:
+- Selectors
+- Colors
+- Fonts
+- Box model
+- Flexbox
+- Grid
+- Positioning
+- Responsive design
+- Media queries
+
+Project ideas:
+- Responsive Portfolio
+- Landing Page
+- Product Page
+- Responsive Blog
+
+Suitable certificate types:
+- CSS certificates
+- Web development certificates
+- Frontend development certificates
+
+
+18. DOM
+-------
+
+The Document Object Model represents an HTML document as objects that JavaScript can access and modify.
+
+Important concepts:
+- Selecting elements
+- Changing content
+- Changing styles
+- Creating elements
+- Events
+- Event listeners
+
+Project ideas:
+- Interactive To-Do List
+- Quiz Application
+- Form Validation
+- Calculator
+
+
+19. WEB APIs
+-----------
+
+A Web API allows software applications or web applications to communicate with services through defined requests and responses.
+
+Important concepts:
+- Endpoints
+- Requests
+- Responses
+- HTTP methods
+- Headers
+- Request body
+- Status codes
+- JSON
+- Authentication
+
+Common HTTP methods:
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
+
+Project ideas:
+- Weather API Application
+- Movie Information Application
+- Currency Converter
+- News Application
+- REST API Task Manager
+
+Suitable certificate types:
+- Web development certificates
+- Backend development certificates
+- API development certificates
+
+
+20. REST APIs
+------------
+
+REST is an architectural style commonly used to build web APIs using HTTP.
+
+Important concepts:
+- Resources
+- Endpoints
+- HTTP methods
+- Status codes
+- JSON
+- Stateless communication
+
+Project ideas:
+- Student REST API
+- Task Management API
+- Employee API
+- Product API
+
+
+21. GRAPHQL
+-----------
+
+GraphQL is an API query language that allows clients to request the data they need.
+
+Important concepts:
+- Queries
+- Mutations
+- Schema
+- Types
+- Resolvers
+
+
+22. HTTP
+--------
+
+HTTP is a protocol used for communication between clients and servers on the web.
+
+Important concepts:
+- Requests
+- Responses
+- Methods
+- Headers
+- Status codes
+- URLs
+
+
+23. HTTPS
+---------
+
+HTTPS is HTTP secured using encryption through TLS.
+
+It helps protect data exchanged between clients and servers.
+
+
+24. JSON
+--------
+
+JSON is a lightweight data format commonly used for exchanging structured data between applications.
+
+Example:
+{
+  "name": "Renuka",
+  "skill": "Python"
+}
+
+
+25. XML
+-------
+
+XML is a markup-based format used to represent structured data.
+
+
+26. WEBSOCKETS
+-------------
+
+WebSockets provide persistent two-way communication between a client and server.
+
+Common uses:
+- Chat applications
+- Live notifications
+- Real-time dashboards
+- Online games
+
+
+27. SQL
+-------
+
+SQL is used to store, retrieve, update, and manage data in relational databases.
+
+Important concepts:
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+- WHERE
+- ORDER BY
+- GROUP BY
+- JOIN
+- Subqueries
+- Aggregate functions
+
+Project ideas:
+- Student Database
+- Employee Database
+- Library Database
+- Sales Analysis
+- E-commerce Database
+
+Suitable certificate types:
+- SQL certificates
+- Database certificates
+- Data analytics certificates
+
+
+28. MYSQL
+---------
+
+MySQL is a relational database management system that uses SQL.
+
+Project ideas:
+- Student Management Database
+- Inventory Database
+- Employee Database
+
+
+29. POSTGRESQL
+-------------
+
+PostgreSQL is an open-source relational database management system.
+
+Important concepts:
+- SQL
+- Tables
+- Relationships
+- Indexes
+- Constraints
+- Transactions
+
+
+30. MONGODB
+----------
+
+MongoDB is a NoSQL document database that stores data in document-like structures.
+
+Project ideas:
+- Product Catalog
+- Blog Backend
+- Student Application
+
+
+31. SQLITE
+---------
+
+SQLite is a lightweight relational database stored in a local file.
+
+Common uses:
+- Small applications
+- Mobile applications
+- Prototypes
+- Local storage
+
+
+32. REDIS
+--------
+
+Redis is an in-memory data store commonly used for caching, sessions, and fast data access.
+
+
+33. DATA STRUCTURES AND ALGORITHMS
+----------------------------------
+
+Important data structures:
+- Arrays
+- Linked Lists
+- Stacks
+- Queues
+- Hash Tables
+- Trees
+- Graphs
+
+Important algorithms:
+- Searching
+- Sorting
+- Recursion
+- Traversal
+- Dynamic programming basics
+
+Project ideas:
+- Sorting Visualizer
+- Path Finding Visualizer
+- Search Application
+
+
+34. OBJECT-ORIENTED PROGRAMMING
+-------------------------------
+
+OOP is a programming approach based on objects and classes.
+
+Main concepts:
+- Class
+- Object
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+
+Common uses:
+- Large applications
+- Backend systems
+- Reusable software components
+
+
+35. GIT
+-------
+
+Git is a version control system used to track code changes.
+
+Important concepts:
+- Repository
+- Commit
+- Branch
+- Merge
+- Clone
+- Pull
+- Push
+
+
+36. GITHUB
+----------
+
+GitHub is a platform for hosting Git repositories and collaborating on code.
+
+Common uses:
+- Code hosting
+- Collaboration
+- Portfolio projects
+- Pull requests
+- Issue tracking
+
+
+37. OPERATING SYSTEMS
+---------------------
+
+Important concepts:
+- Processes
+- Threads
+- Memory management
+- File systems
+- Scheduling
+- Deadlocks
+
+
+38. COMPUTER NETWORKS
+---------------------
+
+Important concepts:
+- IP addresses
+- DNS
+- TCP
+- UDP
+- HTTP
+- HTTPS
+- Client-server communication
+
+
+39. AUTHENTICATION
+------------------
+
+Authentication verifies who a user is.
+
+Examples:
+- Username and password
+- OTP
+- Token-based login
+
+
+40. AUTHORIZATION
+-----------------
+
+Authorization determines what an authenticated user is allowed to access.
+
+Example:
+An administrator may have permissions that a normal user does not have.
+
+
+41. TESTING
+-----------
+
+Software testing checks whether software behaves as expected.
+
+Types:
+- Unit testing
+- Integration testing
+- System testing
+- Regression testing
+- API testing
+
+
+42. DEBUGGING
+-------------
+
+Debugging is the process of finding and fixing problems in software.
+
+Common techniques:
+- Reading error messages
+- Using breakpoints
+- Logging
+- Testing small sections
+
+
+43. MICROSERVICES
+-----------------
+
+Microservices architecture divides an application into smaller independent services.
+
+Important concepts:
+- Independent services
+- APIs
+- Service communication
+- Deployment
+- Scalability
+
+
+44. CI/CD
+---------
+
+CI/CD automates parts of software integration, testing, and deployment.
+
+Important concepts:
+- Continuous Integration
+- Continuous Delivery
+- Continuous Deployment
+- Automated testing
+- Build pipelines
+
+
+45. DOCKER
+----------
+
+Docker packages applications and their dependencies into containers.
+
+Important concepts:
+- Images
+- Containers
+- Dockerfile
+- Volumes
+- Networks
+
+
+46. CLOUD COMPUTING
+-------------------
+
+Cloud computing provides computing resources over the internet.
+
+Important concepts:
+- Compute
+- Storage
+- Databases
+- Networking
+- Scalability
+- Cloud services
+
+Project ideas:
+- Deploy a web application
+- Host an API
+- Cloud-based database application
+
+
+47. DATA ANALYSIS
+-----------------
+
+Data analysis involves collecting, cleaning, transforming, analyzing, and interpreting data.
+
+Common tools:
+- Python
+- Pandas
+- NumPy
+- SQL
+- Excel
+- Power BI
+
+Project ideas:
+- Sales Analysis
+- Customer Analysis
+- Student Performance Analysis
+- E-commerce Analysis
+
+Suitable certificate types:
+- Data analytics certificates
+- Data analysis certificates
+- Business intelligence certificates
+
+
+48. STATISTICS
+-------------
+
+Important concepts:
+- Mean
+- Median
+- Mode
+- Variance
+- Standard deviation
+- Probability
+- Correlation
+- Distributions
+- Hypothesis testing
+
+Project ideas:
+- Student Performance Statistical Analysis
+- Sales Statistics Analysis
+
+
+49. PANDAS
+----------
+
+Pandas is a Python library for data manipulation and analysis.
+
+Important concepts:
+- Series
+- DataFrame
+- Reading data
+- Filtering
+- Sorting
+- Grouping
+- Missing values
+- Merging
+
+Project ideas:
+- Sales Data Analysis
+- Customer Data Analysis
+- CSV Data Cleaning
+
+
+50. NUMPY
+---------
+
+NumPy is a Python library for numerical computing.
+
+Important concepts:
+- Arrays
+- Array operations
+- Indexing
+- Slicing
+- Mathematical operations
+
+Project ideas:
+- Numerical Data Analysis
+- Scientific Calculation Tool
+
+
+51. MACHINE LEARNING
+--------------------
+
+Machine learning allows systems to learn patterns from data and make predictions or decisions.
+
+Important concepts:
+- Features
+- Labels
+- Training data
+- Testing data
+- Classification
+- Regression
+- Clustering
+- Model evaluation
+
+Project ideas:
+- House Price Prediction
+- Student Performance Prediction
+- Spam Detection
+- Customer Churn Prediction
+- Sentiment Analysis
+
+Suitable certificate types:
+- Machine learning certificates
+- Data science certificates
+- AI/ML certificates
+
+
+52. DEEP LEARNING
+-----------------
+
+Deep learning uses neural networks with multiple layers to learn complex patterns.
+
+Important concepts:
+- Neural networks
+- CNN
+- RNN
+- Training
+- Loss
+- Optimization
+
+Project ideas:
+- Image Classification
+- Sign Language Recognition
+- Handwritten Digit Recognition
+- Text Classification
+
+Suitable certificate types:
+- Deep learning certificates
+- AI certificates
+- Machine learning certificates
+
+
+53. DATA VISUALIZATION
+----------------------
+
+Data visualization presents data using charts and graphs.
+
+Common tools:
+- Matplotlib
+- Seaborn
+- Plotly
+- Power BI
+
+Project ideas:
+- Sales Dashboard
+- Student Performance Dashboard
+- Financial Dashboard
+
+
+54. POWER BI
+-----------
+
+Power BI is a business intelligence and data visualization platform.
+
+Important concepts:
+- Data import
+- Data cleaning
+- Data modeling
+- Relationships
+- Visualizations
+- Dashboards
+- DAX basics
+
+Project ideas:
+- Sales Dashboard
+- HR Analytics Dashboard
+- Student Performance Dashboard
+- Financial Dashboard
+- E-commerce Dashboard
+
+Suitable certificate types:
+- Power BI certificates
+- Business intelligence certificates
+- Data analytics certificates
+
+
+55. PYTHON ANALYST
+------------------
+
+A Python Analyst role may involve Python, SQL, data analysis, Pandas, NumPy, statistics, visualization, and reporting.
+
+Project ideas:
+- Sales Data Analysis
+- Job Application Tracker
+- Customer Data Analysis
+- E-commerce Data Analysis
+
+Suitable certificate types:
+- Python certificates
+- Data analytics certificates
+- SQL certificates
+- Business intelligence certificates
+
+
+56. DATA ANALYST
+---------------
+
+A Data Analyst analyzes data and creates useful insights for decision-making.
+
+Common skills:
+- SQL
+- Excel
+- Python
+- Pandas
+- Statistics
+- Power BI
+- Data visualization
+
+Project ideas:
+- Sales Analysis
+- Customer Churn Analysis
+- HR Analytics
+- E-commerce Analytics
+
+Suitable certificate types:
+- Data analytics certificates
+- SQL certificates
+- Power BI certificates
+- Business intelligence certificates
+
+
+57. SOFTWARE DEVELOPER
+----------------------
+
+A software developer designs, develops, tests, and maintains software applications.
+
+Common skills:
+- Programming
+- Data structures
+- Algorithms
+- OOP
+- Git
+- Databases
+- Testing
+
+Project ideas:
+- Management System
+- E-commerce Application
+- Task Management Application
+- REST API
+
+
+58. FRONTEND DEVELOPER
+----------------------
+
+A frontend developer builds the user interface of web applications.
+
+Common skills:
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- DOM
+- Web APIs
+- Frontend frameworks
+
+Project ideas:
+- Portfolio
+- Job Application Tracker
+- E-commerce Frontend
+- Dashboard
+
+
+59. BACKEND DEVELOPER
+---------------------
+
+A backend developer builds server-side applications, APIs, business logic, and database integrations.
+
+Common skills:
+- Programming
+- APIs
+- Databases
+- Authentication
+- Testing
+- Git
+
+Project ideas:
+- REST API
+- Authentication System
+- E-commerce Backend
+- Task Management API
+
+
+60. FULL STACK DEVELOPER
+------------------------
+
+A full stack developer works with both frontend and backend parts of applications.
+
+Common skills:
+- HTML
+- CSS
+- JavaScript
+- Backend programming
+- APIs
+- Databases
+- Git
+
+Project ideas:
+- Full Stack Job Application Tracker
+- E-commerce Application
+- Student Management System
+- Task Management Application
+
+
+61. AI/ML ENGINEER
+------------------
+
+An AI/ML Engineer develops machine learning and AI systems.
+
+Common skills:
+- Python
+- Mathematics
+- Statistics
+- Machine Learning
+- Deep Learning
+- Data Processing
+- Model Evaluation
+
+Project ideas:
+- Image Classification
+- Recommendation System
+- Prediction System
+- NLP Application
+
+
+62. SKILL GAP ANALYSIS
+----------------------
+
+Skill gap analysis compares a user's current skills with the skills required for a target role.
+
+Basic flow:
+Current Skills
+→ Target Career Skills
+→ Compare Skills
+→ Identify Missing Skills
+→ Create Learning Roadmap
+
+
+63. RESUME GENERATION
+---------------------
+
+Resume generation creates professional resume content from user-provided information.
+
+The resume generator should use only information supplied by the user.
+
+Useful resume sections:
+- Name and contact information
+- Professional Summary
+- Education
+- Technical Skills
+- Projects
+- Certifications
+- Experience
+- Achievements
+
+Resume rules:
+- Keep content concise.
+- Use professional language.
+- Make it ATS-friendly.
+- Use action-oriented project descriptions when the user's information supports them.
+- Never invent experience, projects, skills, education, certifications, or achievements.
+
+
+64. ATS-FRIENDLY RESUME
+-----------------------
+
+An ATS-friendly resume is structured so applicant tracking systems can read its content easily.
+
+Important practices:
+- Use clear section headings.
+- Use standard resume terminology.
+- Keep formatting simple.
+- Include relevant technical skills.
+- Use keywords relevant to the target role.
+- Avoid unnecessary graphics and complicated layouts.
+
+
+65. RESUME PROJECT DESCRIPTIONS
+-------------------------------
+
+Project descriptions should briefly explain:
+- What the project does
+- Technologies used
+- Main functionality
+- User's actual contribution
+
+Do not claim work that the user did not perform.
+
+
+66. RESUME SKILLS SELECTION
+---------------------------
+
+Skills listed on a resume should be:
+- Relevant to the target role
+- Actually known by the user
+- Supported by projects or learning when possible
+- Clearly categorized
+
+Possible categories:
+- Programming Languages
+- Web Technologies
+- Databases
+- Data/AI
+- Tools
+- Cloud
